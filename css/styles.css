@@ -5,6 +5,7 @@ body {
   color: #434455;
   background-color: var(--background-color-main);
 }
+
 :root {
   --main-text-color: #434455;
   --main-titles-color: #2e2f42;
@@ -16,6 +17,34 @@ body {
   --link-text-color: #2e2f42;
   --button-back-color: #f4f4fd;
   --background-color-main: #ffffff;
+}
+
+/** Reset start */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/** Component ctyles */
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /* outline: 2px solid red; */
 }
 
 .link {
@@ -33,9 +62,14 @@ body {
 
 address {
   font-style: normal;
+  margin-left: auto;
 }
 .address-item:hover {
   color: #404bbf;
+}
+.address-items {
+  display: flex;
+  gap: 40px;
 }
 
 .address-item {
@@ -55,6 +89,23 @@ address {
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+.header {
+  padding-top: 25.5px;
+  padding-bottom: 25.5px;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+}
+.header-container {
+  display: flex;
 }
 .header-logo-studio {
   color: #2e2f42;
@@ -82,6 +133,8 @@ button {
 }
 .first-title {
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 292px;
 }
 
 .title-first {
@@ -90,6 +143,8 @@ button {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
+  max-width: 496px;
+  margin: 0 auto;
 }
 
 .order-service {
@@ -102,14 +157,27 @@ button {
   letter-spacing: 0.04em;
   cursor: pointer;
   text-align: center;
+  margin-top: 48px;
+  /* display: block;
+  align-items: center; 
+   display: block;
+  align-items: center;*/
+  display: block;
+  margin-left: 480px;
+  margin-right: 479px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background: var(--iris, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
 }
-
 .order-service:hover,
 .order-service:focus {
   background-color: #404bbf;
 }
 
 .filters-button {
+  padding: 12px 24px;
   color: var(--logo-color);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -118,22 +186,21 @@ button {
   letter-spacing: 0.04em;
   background-color: var(--button-back-color);
   cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--cloud, #f4f4fd);
 }
+.btn-properties:first-child {
+  background-color: #404bbf;
+  color: #ffffff;
+}
+
 .filters-button:hover {
   color: #ffffff;
   background-color: #404bbf;
 }
 .filters-button:focus {
   color: #ffffff;
-  background-color: #404bbf;
-}
-
-.filter-button-all {
-  color: #ffffff;
-  background-color: #404bbf;
-}
-.filter-button-all:hover,
-.filter-button-all:focus {
   background-color: #404bbf;
 }
 
@@ -150,6 +217,7 @@ button {
   text-align: center;
   color: var(--main-titles-color);
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 .title-second {
   text-align: center;
@@ -159,6 +227,11 @@ button {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
+  margin-bottom: 72px;
+}
+.company-philosophy {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .hidden-title {
   font-weight: 500;
@@ -166,11 +239,22 @@ button {
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
+.team {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
 .our-team {
   background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .team-people-infa {
-  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  width: 264px;
 }
 .team-people-name {
   font-weight: 500;
@@ -179,9 +263,12 @@ button {
   letter-spacing: 0.02em;
   color: var(--main-titles-color);
   background-color: var(--background-color-main);
+  margin-bottom: 8px;
+  text-align: center;
 }
 .team-people-pict {
   background-color: #ffffff;
+  margin-bottom: 32px;
 }
 .occupation-team-list {
   font-size: 16px;
@@ -189,17 +276,32 @@ button {
   color: var(--main-text-color);
   background-color: var(--background-color-main);
   letter-spacing: 0.02em;
+  padding-bottom: 32px;
+  text-align: center;
 }
 
+.philosophy {
+  display: flex;
+  gap: 24px;
+}
+.philosophy-subjects {
+  /* width: calc((100%-3 * 24px) / 4); */
+  width: 264px;
+}
 .philosophy-list {
   color: var(--main-titles-color);
   letter-spacing: 0.02em;
   line-height: 1.2;
   font-size: 20px;
   font-weight: 500;
+  margin-bottom: 8px;
 }
 .simple-text-philosophy {
   line-height: 1.5;
+}
+.offers {
+  display: flex;
+  gap: 24px;
 }
 
 .title-item-description {
@@ -208,19 +310,49 @@ button {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-titles-color);
+  margin-bottom: 16px;
 }
 .description-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  margin-bottom: 32px;
+}
+.projects {
+  padding-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.projects-ones {
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
+  width: 360px;
+}
+/* .icon {
+  display: flex;
+  margin-top: -3px;
+} */
+.menu-items {
+  padding-top: 96px;
+  margin-bottom: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 
 .footer {
   background-color: #2e2f42;
+  padding-top: 101.5px;
+  padding-bottom: 100px;
 }
 .logo-footer-studio {
   color: #f4f4fd;
+}
+.project-pictures {
+  margin-bottom: 32px;
 }
 
 .footer-text {
@@ -230,6 +362,8 @@ button {
   font-weight: 400;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  margin-top: 17.5px;
+  max-width: 264px;
 }
 .footer {
   background-color: var(--header-footer-background-color);
