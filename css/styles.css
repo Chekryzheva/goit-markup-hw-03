@@ -93,6 +93,7 @@ address {
   text-transform: uppercase;
   margin-right: 76px;
   display: inline-block;
+  margin-bottom: 16px;
 }
 
 .header {
@@ -182,10 +183,20 @@ button {
 .order-service:focus {
   background-color: #404bbf;
 }
+
 .visually-hidden {
-  position: fixed;
-  transform: scale(0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
 .doings {
   padding-bottom: 120px;
 }
@@ -367,8 +378,7 @@ button {
 
 .footer {
   background-color: #2e2f42;
-  padding-top: 101.5px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 .logo-footer-studio {
   color: #f4f4fd;
